@@ -19,18 +19,20 @@ function palindromoCheck(parola) {
     if (typeof parola !== 'string' || parola === null) {
         alert('Parola non identificata');
         return false;
-    }
-    // Divide in un array con tutti i caratteri
-    const caratteri = parola.toLowerCase().split("");
-
-    for (i=0, j=caratteri.length -1; i<caratteri.length -1, j>0; i++, j--) {
-        //Per ogni carattere specchiato, controlla se è uguale
-        if (caratteri[i] !== caratteri[j]) {
-            alert('Non un palindromo');
-            return false;
-        } else {
-            alert("E' un palindromo!");
-            return true;
+    } else {
+        // Divide in un array con tutti i caratteri
+        const caratteri = parola.toLowerCase().split("");
+        for (i = 0, j = caratteri.length - 1; i < caratteri.length - 1, j > 0; i++, j--) {
+            //Per ogni carattere specchiato, controlla se è uguale
+            if (caratteri[i] !== caratteri[j]) {
+                alert('Non un palindromo');
+                console.log('Non palindromo');
+                return false;
+            } else {
+                alert("E' un palindromo!");
+                console.log('Palindromo');
+                return true;
+            }
         }
     }
 }
@@ -38,10 +40,3 @@ function palindromoCheck(parola) {
 const parolaInput = prompt('Inserisci la parola');
 const checkResult = palindromoCheck(parolaInput);
 
-/// Pari e Dispari
-
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.,
-// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).,
-// Sommiamo i due numeri,
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione),
-// Dichiariamo chi ha vinto.
