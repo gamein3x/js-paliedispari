@@ -1,0 +1,1 @@
+# Esercizio del 31/03/26: Palindromo e Pari o Dispari
