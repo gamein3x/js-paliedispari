@@ -17,6 +17,7 @@
 function palindromoCheck(parola) {
     // Controlla se la parola è una stringa
     if (typeof parola !== 'string' || parola === null) {
+        alert('Parola non identificata');
         return false;
     }
     // Divide in un array con tutti i caratteri
@@ -25,12 +26,17 @@ function palindromoCheck(parola) {
     for (i=0, j=caratteri.length -1; i<caratteri.length -1, j>0; i++, j--) {
         //Per ogni carattere specchiato, controlla se è uguale
         if (caratteri[i] !== caratteri[j]) {
+            alert('Non un palindromo');
             return false;
         } else {
+            alert("E' un palindromo!");
             return true;
         }
     }
 }
+
+const parolaInput = prompt('Inserisci la parola');
+const checkResult = palindromoCheck(parolaInput);
 
 /// Pari e Dispari
 
