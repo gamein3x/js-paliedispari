@@ -14,6 +14,24 @@
 //      -Leggere l'array a contrario e verificare che corrisponda all'array in ordine;
 //      -Ritornare true se non corrisponde e false se corrisponde;
 
+function palindromoCheck(parola) {
+    // Controlla se la parola è una stringa
+    if (typeof parola !== 'string' || parola === null) {
+        return false;
+    }
+    // Divide in un array con tutti i caratteri
+    const caratteri = parola.toLowerCase().split("");
+
+    for (i=0, j=caratteri.length -1; i<caratteri.length -1, j>0; i++, j--) {
+        //Per ogni carattere specchiato, controlla se è uguale
+        if (caratteri[i] !== caratteri[j]) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
 /// Pari e Dispari
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.,
